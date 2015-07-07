@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+  a(href="/users/profile/new") new
+  a(href="/users/profile/edit") edit
+  form(action="/logout", method="post")
+    input(type="submit", value="logout")

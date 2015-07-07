@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  form(action="/new", method="post")
+    lable title:
+      input(type="text", name="title")
+    .table
+      .know.column
+        h2 What I know
+        input(type="text", name="know")
+      .what.column
+        h2 What I want to know
+        input(type="text", name="what")
+      .learn.column
+        h2 What I learned
+        h6 this will be filled out later
+      .how.column
+        h2 How I learned it
+        h6 this will be filled out later
+    input(type="submit", value="create")
+  a(href="/users/profile") back
+  form(action="/logout", method="post")
+    input(type="submit", value="logout")

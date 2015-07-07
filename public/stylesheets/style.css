@@ -1,0 +1,47 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input, h2, h6 {
+  margin: 0;
+  display: inline-block;
+}
+
+.table {
+  color: white;
+  height: 500px;
+}
+
+.know {
+  background: purple;
+  width: 20%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+}
+.what {
+  background: violet;
+  width: 20%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+}
+.learn {
+  background: purple;
+  width: 20%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+}
+.how {
+  background: violet;
+  width: 20%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+}
