@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
+var database = require('monk')(process.env.MONGOLAB_URI);
+var db = database.get('users');
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Know/What/Learn/How' });
+  res.render('index', { title: 'know-want-learn (how)' });
 });
 
-router.post('/login', function(req, res, next) {
-  res.cookie('email', req.body.email)
-  res.redirect('/users/profile');
+router.get('/charts', function(req, res, next) {
+  res.render('charts', { title: 'charts' });
 });
 
-router.post('/logout', function(req, res, next) {
-  res.clearCookie('email');
-  res.redirect('/');
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'sign up' });
 });
 
 module.exports = router;

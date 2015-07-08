@@ -1,11 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  form(action="/login", method="post")
-    label email
-      input(type='text' name='email')
-    label password
-      input(type='password' name='password')
-    input(type='submit' value='log in')
+  form.form-inline(action="/login", method="post")
+    label 
+      h3 email
+      input.form-control(type='text' name='email')
+    label 
+      h3 password
+      input.form-control(type='password' name='password')
+    input.btn.btn-default(type='submit' value='log in')
       

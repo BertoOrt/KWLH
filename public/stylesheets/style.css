@@ -7,9 +7,9 @@ a {
   color: #00B7FF;
 }
 
-input, h2, h6 {
+input, h2, h3, h6 {
   margin: 0;
-  display: inline-block;
+  display: block;
 }
 
 .table {
@@ -17,31 +17,83 @@ input, h2, h6 {
   height: 500px;
 }
 
+.title {
+  height: 10%;
+}
+
 .know {
-  background: purple;
+  background: orange;
   width: 20%;
   height: 90%;
   margin: .5%;
   display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
 }
+
 .what {
-  background: violet;
+  background: lightblue;
   width: 20%;
   height: 90%;
   margin: .5%;
   display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
 }
+
 .learn {
-  background: purple;
+  background: orange;
   width: 20%;
   height: 90%;
   margin: .5%;
   display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
 }
+
 .how {
-  background: violet;
+  background: lightblue;
   width: 20%;
   height: 90%;
   margin: .5%;
   display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.knowNew {
+  background: orange;
+  width: 30%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.whatNew {
+  background: lightblue;
+  width: 30%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.learnNew {
+  background: orange;
+  width: 15%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.howNew {
+  background: lightblue;
+  width: 15%;
+  height: 90%;
+  margin: .5%;
+  display: inline-block;
+  padding: 1%;
+  box-sizing: border-box;
 }

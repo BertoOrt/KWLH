@@ -1,23 +1,26 @@
 extends ../layout
 
 block content
-  form(action="/new", method="post")
-    lable title:
-      input(type="text", name="title")
+  form.form-inline(action="/new", method="post")
+    lable 
+      h3 title
+      input.form-control(type="text", name="title")
     .table
-      .know.column
-        h2 What I know
-        input(type="text", name="know")
-      .what.column
-        h2 What I want to know
-        input(type="text", name="what")
-      .learn.column
-        h2 What I learned
-        h6 this will be filled out later
-      .how.column
-        h2 How I learned it
-        h6 this will be filled out later
-    input(type="submit", value="edit")
-  a(href="/users/profile") back
-  form(action="/logout", method="post")
-    input(type="submit", value="logout")
+      .img-rounded.know.column
+        .title
+          h2 what I know
+        input.form-control(type="text", name="know")
+      .img-rounded.what.column
+        .title
+          h3 what I want to know
+        input.form-control(type="text", name="what")
+      .img-rounded.learn.column
+        .title
+          h2 what I learned
+        input.form-control(type="text", name="learn")
+      .img-rounded.how.column
+        .title
+          h2 how I learned it
+        input.form-control(type="text", name="how")
+    input.btn.btn-success(type="submit", value="edit")
+  a.btn.btn-info(href="/users/profile") back
