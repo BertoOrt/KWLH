@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookieSession = require('cookie-session');
 var React = require('react');
-var MarkdownTextarea = require('react-markdown-textarea');
+var browserify = require('browserify');
+var b = browserify();
+b.add('./public/javascripts/browserifyMe.js');
 
 require('dotenv').load();
 
