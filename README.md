@@ -1,10 +1,10 @@
-# KWLH
+# KWL(H)
 
 Best website to create and use KWL charts!
 
-###link
+###Link
 
-'https://agile-anchorage-3739.herokuapp.com/'
+```https://agile-anchorage-3739.herokuapp.com/```
 
 ### What are KWL(H) charts you ask?!
 
