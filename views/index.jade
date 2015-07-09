@@ -1,6 +1,8 @@
 extends layout
 
 block content
+  h3 Login with Github
+  a.btn.btn-primary(href="/auth/github") Login
   form.form-inline(action="/login", method="post")
     label 
       h3 email
