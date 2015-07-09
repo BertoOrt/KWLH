@@ -1,26 +1,30 @@
 extends ../layout
 
 block content
-  form.form-inline(action="/new", method="post")
-    lable 
+  form.form-inline(action="/edit", method="post")
+    lable
       h3 title
       input.form-control(type="text", name="title")
-    .table
-      .img-rounded.know.column
+    .tablerow
+      .img-rounded.knowNew.column2
         .title
           h2 what I know
-        input.form-control(type="text", name="know")
-      .img-rounded.what.column
+        .textarea
+          textarea(data-provide='markdown')
+      .img-rounded.whatNew.column2
         .title
-          h3 what I want to know
-        input.form-control(type="text", name="what")
-      .img-rounded.learn.column
+          h2 what I want to know
+        .textarea
+          textarea(data-provide='markdown')
+      .img-rounded.learnNew.column2
         .title
           h2 what I learned
-        input.form-control(type="text", name="learn")
-      .img-rounded.how.column
+        .textarea
+          textarea(data-provide='markdown')
+      .img-rounded.howNew.column2
         .title
           h2 how I learned it
-        input.form-control(type="text", name="how")
-    input.btn.btn-success(type="submit", value="edit")
-  a.btn.btn-info(href="/users/profile") back
+        .textarea
+          textarea(data-provide='markdown')
+    input.button.btn.btn-success(type="submit", value="edit")
+  a.button.btn.btn-info(href="/users/profile") back

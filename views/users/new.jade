@@ -5,20 +5,23 @@ block content
     lable
       h3 title
       input.form-control(type="text", name="title")
-    .table
+    .tablerow
       .img-rounded.knowNew.column
         .title
           h2 what I know
-        textarea#markdown(data-provide="markdown")
+        .textarea
+          textarea(data-provide='markdown')
       .img-rounded.whatNew.column
         .title
           h2 what I want to know
-        input.form-control(type="text", name="what")
+        .textarea
+          textarea(data-provide='markdown')
+    .tablerow2
       .img-rounded.learnNew.column
         .title
           h2 what I learned
       .img-rounded.howNew.column
         .title
           h2 how I learned it
-    input.btn.btn-warning(type="submit", value="create")
-  a.btn.btn-info(href="/users/profile") back
+    input.button.btn.btn-warning(type="submit", value="create")
+  a.button.btn.btn-info(href="/users/profile") back

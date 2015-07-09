@@ -16,88 +16,60 @@ input, h2, h3, h6 {
   padding: 1%;
 }
 
-.table {
+.tablerow {
   color: white;
   height: 500px;
+}
+
+.tablerow2 {
+  color: white;
+  height: 100px;
 }
 
 .title {
   height: 10%;
 }
 
-.know {
+.column {
   background: orange;
-  width: 20%;
-  height: 90%;
+  width: 48%;
+  height: 95%;
   margin: .5%;
   display: inline-block;
   padding: 1%;
   box-sizing: border-box;
 }
 
-.what {
-  background: lightblue;
-  width: 20%;
-  height: 90%;
+.column2 {
+  background: orange;
+  width: 24%;
+  height: 95%;
   margin: .5%;
   display: inline-block;
   padding: 1%;
   box-sizing: border-box;
 }
 
-.learn {
-  background: orange;
-  width: 20%;
-  height: 90%;
-  margin: .5%;
-  display: inline-block;
-  padding: 1%;
-  box-sizing: border-box;
+.textarea {
+  width: 100%;
+  height: 80%;
 }
 
-.how {
-  background: lightblue;
-  width: 20%;
-  height: 90%;
-  margin: .5%;
-  display: inline-block;
-  padding: 1%;
-  box-sizing: border-box;
+.md-editor {
+  width: 100%;
+  height: 100%;
 }
 
-.knowNew {
-  background: orange;
-  width: 30%;
-  height: 90%;
-  margin: .5%;
-  display: inline-block;
-  padding: 1%;
-  box-sizing: border-box;
+textarea {
+  width: 100%;
+  height: 88%;
 }
-.whatNew {
-  background: lightblue;
-  width: 30%;
-  height: 90%;
-  margin: .5%;
-  display: inline-block;
-  padding: 1%;
-  box-sizing: border-box;
+
+.md-input, .md-preview {
+  color: black
 }
-.learnNew {
-  background: orange;
-  width: 15%;
-  height: 90%;
-  margin: .5%;
-  display: inline-block;
-  padding: 1%;
-  box-sizing: border-box;
-}
-.howNew {
-  background: lightblue;
-  width: 15%;
-  height: 90%;
-  margin: .5%;
-  display: inline-block;
-  padding: 1%;
-  box-sizing: border-box;
+
+.button {
+  margin: 1%;
+  display: inline;
 }
