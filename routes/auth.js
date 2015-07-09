@@ -12,7 +12,7 @@ router.get('/auth/github', passport.authenticate('github'));
 
 router.get('/auth/github/callback', passport.authenticate('github', {
   failureRedirect: '/',
-  successRedirect: '/user/' + req.session.username,
+  successRedirect: '/',
 }));
 
 router.post('/signup', function(req, res, next) {
