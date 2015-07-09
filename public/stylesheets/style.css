@@ -53,6 +53,7 @@ input, h2, h3, h6 {
 .textarea {
   width: 100%;
   height: 80%;
+  display: inline-block;
 }
 
 .md-editor {
