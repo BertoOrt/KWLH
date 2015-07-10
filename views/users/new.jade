@@ -1,27 +1,5 @@
 extends ../layout
 
 block content
-  form.form-inline(action="/new", method="post")
-    lable
-      h3 title
-      input.form-control(type="text", name="title")
-    .tablerow
-      .img-rounded.knowNew.column
-        .title
-          h2 what I know
-        .textarea
-          textarea(data-provide='markdown')
-      .img-rounded.whatNew.column
-        .title
-          h2 what I want to know
-        .textarea
-          textarea(data-provide='markdown')
-    .tablerow2
-      .img-rounded.learnNew.column
-        .title
-          h2 what I learned
-      .img-rounded.howNew.column
-        .title
-          h2 how I learned it
-    input.button.btn.btn-warning(type="submit", value="create")
+
   a.button.btn.btn-info(href="/users/"+ username) back

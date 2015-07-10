@@ -1,24 +1,27 @@
 extends ../layout
 
 block content
-  h3 title
-    .tablerow
-      .img-rounded.knowNew.column
-        .title
-          h2 what I know
-        .textarea
-      .img-rounded.whatNew.column
-        .title
-          h2 what I want to know
-        .textarea
-    .tablerow2
-      .img-rounded.learnNew.column
-        .title
-          h2 what I learned
-        .textarea
-      .img-rounded.howNew.column
-        .title
-          h2 how I learned it
-        .textarea
+  h3= chart.topic
+  .tablerow
+    .img-rounded.knowNew.column2
+      .title
+        h2 what I know
+      .textarea
+        textarea(data-provide='markdown' name='know')= chart.know
+    .img-rounded.whatNew.column2
+      .title
+        h2 what I want to know
+      .textarea
+        textarea(data-provide='markdown' name='want')= chart.want
+    .img-rounded.learnNew.column2
+      .title
+        h2 what I learned
+      .textarea
+        textarea(data-provide='markdown' name='learned')= chart.learned
+    .img-rounded.howNew.column2
+      .title
+        h2 how I learned it
+      .textarea
+        textarea(data-provide='markdown' name='how')= chart.how
   a.button.btn.btn-info(href="/"+ username +"/edit") edit
   a.button.btn.btn-info(href="/"+ username +"/profile") back
