@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('cookie-session');
 var passport = require('passport');
-var GitHubStrategy = require('passport-github2')
+var util = require('util');
+var GitHubStrategy = require('passport-github2').Strategy
 
 require('dotenv').load();
 
@@ -36,12 +37,12 @@ passport.use(new GitHubStrategy({
     clientID: process.env.LINKEDIN_CLIENT_ID,
     clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
     callbackURL: process.env.HOST + "/auth/github/callback",
-    scope: ['r_emailaddress', 'r_basicprofile'],
-    state: true,
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile);
-    done(null, {githubId: profile.id, displayName: profile.displayName, token: accessToken})
+    console.log(profile._json.avatar_url);
+    process.nextTick(function () {
+      done(null, {githubId: profile.id, displayName: profile.displayName, token: accessToken})
+    });
   }
 ));
 
