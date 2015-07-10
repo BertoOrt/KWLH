@@ -14,7 +14,7 @@ router.get('/auth/github', passport.authenticate('github', {scope: [ 'user:email
 
 router.get('/auth/github/callback', passport.authenticate('github', {
   failureRedirect: '/',
-  successRedirect: '/',
+  successRedirect: '/charts',
 }));
 
 router.post('/signup', function(req, res, next) {
