@@ -1,0 +1,19 @@
+extends ./../layout
+
+block content
+  h1 Your Charts
+  a.btn.btn-success.btn-lg(href='/charts/new') Create a new KWL(H)
+  table.table
+    thead
+      tr
+        th Title 
+        th Options
+    tbody
+      each chart in charts
+        tr
+          td= chart.topic
+          td
+            a.btn.btn-primary.btn-sm(href='/charts/'+chart._id) Show
+            a.btn.btn-success.btn-sm(href='/charts/'+chart._id+'/edit') Edit
+            form(action='/charts/'+chart._id+'/delete' method='post')
+              input.btn.btn-danger.btn-sm(type='submit' value='Delete')

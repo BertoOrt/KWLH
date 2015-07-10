@@ -1,0 +1,30 @@
+extends ./../layout
+
+block content
+  form.form-inline(action="/charts/"+chart._id, method="post")
+    lable
+      h3 title
+      input.form-control(type="text", name="topic" value=(chart ? chart.topic : ''))
+    .tablerow
+      .img-rounded.knowNew.column2
+        .title
+          h2 what I know
+        .textarea
+          textarea(data-provide='markdown' name='know')= chart.know
+      .img-rounded.whatNew.column2
+        .title
+          h2 what I want to know
+        .textarea
+          textarea(data-provide='markdown' name='want')= chart.want
+      .img-rounded.learnNew.column2
+        .title
+          h2 what I learned
+        .textarea
+          textarea(data-provide='markdown' name='learned')= chart.learned
+      .img-rounded.howNew.column2
+        .title
+          h2 how I learned it
+        .textarea
+          textarea(data-provide='markdown' name='how')= chart.how
+    input.button.btn.btn-success(type="submit", value="Save")
+  a.button.btn.btn-info(href="/users/"+ username) back

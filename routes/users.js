@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var database = require('./../connection');
+var usersCollection = database.get('users');
 
 router.get('/:username', function(req, res, next) {
   res.render('users/index', { title: 'Know/What/Learn/How', username: req.params.username });

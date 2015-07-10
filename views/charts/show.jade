@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h3 title
+    .tablerow
+      .img-rounded.knowNew.column
+        .title
+          h2 what I know
+        .textarea
+      .img-rounded.whatNew.column
+        .title
+          h2 what I want to know
+        .textarea
+    .tablerow2
+      .img-rounded.learnNew.column
+        .title
+          h2 what I learned
+        .textarea
+      .img-rounded.howNew.column
+        .title
+          h2 how I learned it
+        .textarea
+  a.button.btn.btn-info(href="/"+ username +"/edit") edit
+  a.button.btn.btn-info(href="/"+ username +"/profile") back
