@@ -5,6 +5,10 @@ block content
     lable
       h3 title
       input.form-control(type="text", name="topic" value=(chart ? chart.topic : ''))
+      .checkbox
+        label
+          input(type='checkbox' name='private' checked=(chart ? (chart.private ? 'checked' : undefined) : undefined)) 
+          |Make Chart Private
     .tablerow
       .img-rounded.knowNew.column2
         .title

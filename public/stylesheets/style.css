@@ -15,7 +15,9 @@ input, h2, h3, h6 {
 .body {
   padding: 1%;
 }
-
+.block{
+  display: block;
+}
 .tablerow {
   color: white;
   height: 500px;

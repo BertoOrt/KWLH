@@ -32,7 +32,7 @@ router.get('/charts/:id', function(req, res, next) {
 //** CREATE **
 //************
 router.post('/charts', function(req, res, next) {
-  chartsCollection.insert({topic: req.body.topic, know: req.body.know, want: req.body.want});
+  chartsCollection.insert({topic: req.body.topic, know: req.body.know, want: req.body.want, private: req.body.private});
   res.redirect('/charts');
 });
 
@@ -49,7 +49,7 @@ router.get('/charts/:id/edit', function(req, res, next) {
 //** UPDATE **
 //************
 router.post('/charts/:id', function(req, res, next) {
-  chartsCollection.update({_id: req.params.id}, {$set: {topic: req.body.topic, know: req.body.know, want: req.body.want, learned: req.body.learned, how: req.body.how}});
+  chartsCollection.update({_id: req.params.id}, {$set: {topic: req.body.topic, know: req.body.know, want: req.body.want, learned: req.body.learned, how: req.body.how, private: req.body.private}});
   res.redirect('/charts/' + req.params.id);
 });
 
