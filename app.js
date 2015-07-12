@@ -11,10 +11,9 @@ var GitHubStrategy = require('passport-github2').Strategy
 
 require('dotenv').load();
 
-var routes = require('./routes/index');
+var charts = require('./routes/charts');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
-var charts = require('./routes/charts');
 
 var app = express();
 
@@ -40,9 +39,9 @@ passport.use(new GitHubStrategy({
     callbackURL: process.env.HOST + "/auth/github/callback",
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile._json.avatar_url);
+    console.log(profile._json.login);
     process.nextTick(function () {
-      done(null, {githubId: profile.id, displayName: profile.displayName, token: accessToken})
+      done(null, {githubId: profile.id, displayName: profile.displayName, username: profile._json.login, email: profile._json.email, token: accessToken})
     });
   }
 ));
@@ -60,9 +59,8 @@ app.use(function (req, res, next) {
   next()
 })
 
-app.use('/', routes);
 app.use('/', auth);
-app.use('/users', users);
+app.use('/', users);
 app.use('/', charts);
 
 // catch 404 and forward to error handler

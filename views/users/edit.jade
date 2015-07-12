@@ -1,5 +1,18 @@
 extends ../layout
 
 block content
-
-  a.button.btn.btn-info(href="/users/"+ username) back
+  h1= title
+  form.form-inline(action="/"+ profile.username +"/edit", method="post")
+    label 
+      h3 name
+      input.form-control(type='text' name='name' value=profile.name)
+    label 
+      h3 email
+      input.form-control(type='text' name='email' value=profile.email)
+    label 
+      h3 username
+      input.form-control(type='text' name='username' value=profile.username)
+    input.btn.btn-default(type='submit' value='edit')
+  form.delete-chart-form(action='/'+profile.username+'/delete' method='post')
+    input.delete-chart.btn.btn-danger.btn-sm(type='submit' value='Delete')
+      

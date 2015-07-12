@@ -4,6 +4,9 @@ block content
   h1= title
   form.form-inline(action="/signup", method="post")
     label 
+      h3 name
+      input.form-control(type='text' name='name')
+    label 
       h3 email
       input.form-control(type='text' name='email')
     label 

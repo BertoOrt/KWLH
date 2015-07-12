@@ -16,10 +16,16 @@ html
     .body
       nav
         a.btn.btn-primary(href="/") home
-        a.btn.btn-primary(href="/charts") charts
-        a.btn.btn-primary(href="/signup") signup
-        if user
+        if username
+          a.btn.btn-primary(href="/" + username) my charts
           a.btn.btn-primary(href="/logout") logout
-          .gitlogin
-            |Hello #{user.displayName}
+          if !user
+            a.btn.btn-primary(href="/"+username+"/edit") edit profile
+          if user
+            | Hello !{user.displayName}
+          else
+            | Hello !{username}
+        else
+          a.btn.btn-primary(href="/login") login
+          a.btn.btn-primary(href="/signup") signup
       block content
