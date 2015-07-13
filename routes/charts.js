@@ -8,7 +8,7 @@ var chartsCollection = database.get('charts');
 //***********
 router.get('/', function(req, res, next) {
   chartsCollection.find({}, {}, function (err, docs) {
-    res.render('charts/index', {charts: docs, username: req.session.username});
+    res.render('charts/index', {title: 'Charts', charts: docs, username: req.session.username});
   });
 });
 

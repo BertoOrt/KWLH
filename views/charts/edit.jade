@@ -1,14 +1,14 @@
 extends ./../layout
 
 block content
+  h3 title
   form.form-inline(action="/charts/"+chart._id, method="post")
     lable
-      h3 title
-      input.form-control(type="text", name="topic" value=(chart ? chart.topic : ''))
+      input.form-control.margin_right(type="text", name="topic" value=(chart ? chart.topic : ''))
       .checkbox
         label
           input(type='checkbox' name='private' checked=(chart ? (chart.private ? 'checked' : undefined) : undefined)) 
-          |Make Chart Private
+          |Private
     .tablerow
       .img-rounded.knowNew.column2
         .title

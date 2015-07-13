@@ -2,7 +2,6 @@ extends ../layout
 
 block content
   h1 Your Charts
-  a.btn.btn-success.btn-lg(href='/' + username + '/new') Create a new KWL(H)
   table.table
     thead
       tr
@@ -12,9 +11,11 @@ block content
       if charts
         each chart in charts
           tr
-            td= chart.topic
             td
-              a.btn.btn-primary.btn-sm(href='/'+username+'/'+chart._id) Show
-              a.btn.btn-success.btn-sm(href='/'+username+'/'+chart._id+'/edit') Edit
-              form.delete-chart-form(action='/'+username+'/'+chart._id+'/delete' method='post')
+              a(href='/'+username+'/'+chart._id) !{chart.topic}
+            td
+              a.btn.btn-primary.btn-sm.margin_right(href='/'+username+'/'+chart._id) Show
+              a.btn.btn-success.btn-sm.margin_right(href='/'+username+'/'+chart._id+'/edit') Edit
+              form.delete-chart-form.inline_block(action='/'+username+'/'+chart._id+'/delete' method='post')
                 input.delete-chart.btn.btn-danger.btn-sm(type='submit' value='Delete')
+  a.btn.btn-success.btn-lg(href='/' + username + '/new') Create a new KWL(H)

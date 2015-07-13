@@ -1,15 +1,16 @@
 extends ../layout
 
 block content
+  h3 title
   form.form-inline(action="/charts", method="post")
-    lable
-      h3 title
-      input.form-control(type="text", name="topic")
-      .block
+    .toprow
+      .title
+      lable
+        input.form-control.margin_right(type="text", name="topic")
       .checkbox
-        label
-          input(type='checkbox' name='private') 
-          |Make Chart Private
+        label.inline_block
+          input.box(type='checkbox' name='private') 
+          | Private
     .tablerow
       .img-rounded.knowNew.column
         .title
@@ -21,12 +22,5 @@ block content
           h2 what I want to know
         .textarea
           textarea(data-provide='markdown' name='want')
-    .tablerow2
-      .img-rounded.learnNew.column
-        .title
-          h2 what I learned
-      .img-rounded.howNew.column
-        .title
-          h2 how I learned it
     input.button.btn.btn-warning(type="submit", value="create")
   a.button.btn.btn-info(href="/" + username) back
