@@ -24,8 +24,7 @@ input, h2, h3, h6 {
 }
 .tablerow {
   color: white;
-  height: 500px;
-  position: relative;
+  height: 65vh;
 }
 
 .tablerow2 {
@@ -37,13 +36,21 @@ input, h2, h3, h6 {
   height: 10%;
 }
 
+.column0 {
+  background: orange;
+  width: 24%;
+  height: 95%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
 .column {
   background: orange;
   width: 48%;
   height: 95%;
   margin: .5%;
   display: inline-block;
-  padding: 1%;
+  padding: 2%;
   box-sizing: border-box;
 }
 
@@ -120,4 +127,5 @@ textarea {
   background: #FFFFF5;
   height: 80%;
   width: 99%;
+  display: inline-block;
 }

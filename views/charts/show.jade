@@ -3,21 +3,21 @@ extends ../layout
 block content
   h3= topic
   .tablerow
-    .img-rounded.knowNew.column2
+    .img-rounded.knowNew.col-md-3.column0
       .title
         h2 what I know
-      .showbox.img-rounded !{know}
-    .img-rounded.whatNew.column2
+      .showbox.img-rounded.margin_top !{know}
+    .img-rounded.wantNew.col-md-3.column0
       .title
         h2 what I want to know
-      .showbox.img-rounded !{want}
-    .img-rounded.learnNew.column2
+      .showbox.img-rounded.margin_top !{want}
+    .img-rounded.learnNew.col-md-3.column0
       .title
         h2 what I learned
-      .showbox.img-rounded !{learned}
-    .img-rounded.howNew.column2
+      .showbox.img-rounded.margin_top !{learned}
+    .img-rounded.howNew.col-md-3.column0
       .title
         h2 how I learned it
-      .showbox.img-rounded !{how}
+      .showbox.img-rounded.margin_top !{how}
   a.button.btn.btn-info(href="/"+ username +"/" + id + "/edit") edit
   a.button.btn.btn-info(href="/"+ username) back
