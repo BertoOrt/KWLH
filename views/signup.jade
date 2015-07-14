@@ -2,18 +2,28 @@ extends layout
 
 block content
   h1= title
+  .errors
+    if errors
+      for error in errors
+        p.error
+          =error
   form.form-inline(action="/signup", method="post")
     label 
       h3 name
-      input.form-control(type='text' name='name')
+      input.form-control(type='text' name='name' value=(signUpName ? signUpName : undefined))
     label 
       h3 email
-      input.form-control(type='text' name='email')
+      input.form-control(type='email' name='email' value=(email ? email : undefined))
     label 
       h3 username
-      input.form-control(type='text' name='username')
-    label 
-      h3 password
-      input.form-control(type='password' name='password')
-    input.btn.btn-default(type='submit' value='sign up')
+      input.form-control(type='text' name='username' value=(username ? username : undefined))  
+    .block
+      label
+        h3 password
+        input.password.form-control(type='password' name='password')
+      label
+        h3 confirm password
+        input.confirm.form-control(type='password' name='confirmation')
+      .inline_block.confirmation
+    input.margin_top.btn.btn-default(type='submit' value='sign up')
       

@@ -1,10 +1,15 @@
 extends layout
 
 block content
+  .errors
+    if errors
+      for error in errors
+        p.error
+          =error
   form.form-inline(action="/login", method="post")
     label 
       h3 email
-      input.form-control(type='text' name='email')
+      input.form-control(type='email' name='email' value=(email ? email : undefined))
     label 
       h3 password
       input.form-control(type='password' name='password')

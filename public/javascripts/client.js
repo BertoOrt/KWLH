@@ -9,5 +9,12 @@ $( document ).ready(function() {
       event.preventDefault();
     }
   });
-
+  $('.confirm').keyup(function (e) {
+    if ($('.password').val() === $('.confirm').val()) {
+      $('.confirmation').html('passwords match!')
+    }
+    else {
+      $('.confirmation').html('passwords do not match!')
+    }
+  })
 });

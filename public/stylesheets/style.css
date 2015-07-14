@@ -98,3 +98,19 @@ textarea {
 .margin_right {
   margin-right: 1%;
 }
+
+.error {
+  color: red;
+}
+
+.errors {
+  margin-top: 1%;
+}
+
+.margin_top {
+  margin-top: 1%;
+}
+
+.confirmation {
+  color: lightgrey;
+}

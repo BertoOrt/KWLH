@@ -39,7 +39,6 @@ passport.use(new GitHubStrategy({
     callbackURL: process.env.HOST + "/auth/github/callback",
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile._json.login);
     process.nextTick(function () {
       done(null, {githubId: profile.id, displayName: profile.displayName, username: profile._json.login, email: profile._json.email, token: accessToken})
     });
