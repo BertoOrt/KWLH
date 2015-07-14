@@ -8,6 +8,7 @@ var session = require('cookie-session');
 var passport = require('passport');
 var util = require('util');
 var GitHubStrategy = require('passport-github2').Strategy
+var markdown = require( "markdown" ).markdown;
 
 require('dotenv').load();
 

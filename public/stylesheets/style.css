@@ -114,3 +114,10 @@ textarea {
 .confirmation {
   color: lightgrey;
 }
+
+.showbox {
+  color: black;
+  background: #FFFFF5;
+  height: 80%;
+  width: 99%;
+}

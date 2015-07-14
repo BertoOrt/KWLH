@@ -82,6 +82,15 @@ expose.toHTML = function toHTML( source , dialect , options ) {
   return expose.renderJsonML( input );
 };
 
+expose.mark = function (data) {
+  if (data === undefined) {
+    return ""
+  }
+  else {
+    return this.toHTML(data);
+  }
+}
+
 /**
  *  toHTMLTree( markdown, [dialect] ) -> JsonML
  *  toHTMLTree( md_tree ) -> JsonML

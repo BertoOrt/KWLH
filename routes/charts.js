@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var database = require('./../connection');
 var chartsCollection = database.get('charts');
+var markdown = require('./../public/Javascripts/markdown');
 
 //***********
 //** INDEX **
@@ -30,7 +31,11 @@ router.get('/:username/new', function(req, res, next) {
 //**********
 router.get('/:username/:id', function(req, res, next) {
   chartsCollection.findOne({_id: req.params.id}, {}, function (err, doc) {
-    res.render('charts/show', {username: req.session.username, id: req.params.id, chart: doc});
+    var know = markdown.mark(doc.know);
+    var want = markdown.mark(doc.want);
+    var learned = markdown.mark(doc.learned);
+    var how = markdown.mark(doc.how);
+    res.render('charts/show', {username: req.session.username, id: req.params.id, topic: doc.topic, know: know, want: want, learned: learned, how: how});
   });
 });
 
