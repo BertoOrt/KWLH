@@ -3,6 +3,7 @@ var router = express.Router();
 var database = require('./../connection');
 var chartsCollection = database.get('charts');
 var markdown = require('./../public/Javascripts/markdown');
+var validator = require('validator');
 
 //***********
 //** INDEX **
@@ -41,7 +42,7 @@ router.get('/:username/new', function (req, res, next) {
 //** SHOW **
 //**********
 router.get('/:username/:id', function (req,res,next) {
-  if (req.params.id.length === 24) {
+  if (validator.isMongoId(req.params.id)) {
     next();
   }
   else {

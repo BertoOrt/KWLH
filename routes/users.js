@@ -3,7 +3,10 @@ var router = express.Router();
 var database = require('./../connection');
 var usersCollection = database.get('users');
 
-router.use('/:username', function (req, res, next) {
+//**********
+//** EDIT **
+//**********
+router.get('/:username/edit', function (req, res, next) {
   if (req.session === null) {
     res.redirect('/')
   }
@@ -13,12 +16,7 @@ router.use('/:username', function (req, res, next) {
   else {
     next()
   }
-})
-
-//**********
-//** EDIT **
-//**********
-router.get('/:username/edit', function(req, res, next) {
+}, function(req, res, next) {
   usersCollection.findOne({username: req.params.username}, function (err, data) {
     res.render('users/edit', { title: 'Edit Profile', profile: data });
   })
