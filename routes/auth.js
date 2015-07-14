@@ -15,21 +15,6 @@ router.get('/signup', function(req, res, next) {
   res.render('signup', { title: 'sign up' });
 });
 
-// Authorization
-// router.use(function (req,res,next) {
-//   if (req.session = null) {
-//     redirect('/')
-//   }
-//   else {
-//     next();
-//   }
-// })
-
-router.get('/logout', function(req, res, next) {
-  req.session = null;
-  res.redirect('/');
-});
-
 router.get('/addUser', function(req, res, next) {
   req.session.username = req.session.passport.user.username;
   usersCollection.update({username: req.session.passport.user.username}, {username: req.session.passport.user.username, name: req.session.passport.user.displayName, email: req.session.passport.user.email, password: 'github'}, {upsert: true})
@@ -43,6 +28,20 @@ router.get('/auth/github/callback', passport.authenticate('github', {
   failureRedirect: '/',
   successRedirect: '/addUser',
 }));
+
+router.use(function (req,res,next) {
+  if (req.session === null) {
+    redirect('/')
+  }
+  else {
+    next();
+  }
+})
+
+router.get('/logout', function(req, res, next) {
+  req.session = null;
+  res.redirect('/');
+});
 
 router.post('/signup', function (req,res,next) {
   usersCollection.findOne({email: req.body.email.trim()}, function (err, data) {

@@ -14,7 +14,7 @@ block content
         if !chart.private
           tr
             td
-              a(href='/'+username+'/'+chart._id) !{chart.topic}
+              a(href='/'+ chart.username +'/'+chart._id) !{chart.topic}
             td= chart.username
             td
               if chart.username === username

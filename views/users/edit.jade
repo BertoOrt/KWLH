@@ -13,6 +13,6 @@ block content
       h3 username
       input.form-control(type='text' name='username' value=profile.username)
     input.btn.btn-default(type='submit' value='edit')
-  form.delete-chart-form(action='/'+profile.username+'/delete' method='post')
-    input.delete-chart.btn.btn-danger.btn-sm(type='submit' value='Delete')
+  form(action='/'+profile.username+'/delete' method='post')
+    input.delete-user.btn.btn-danger.btn-sm(type='submit' value='Delete')
       

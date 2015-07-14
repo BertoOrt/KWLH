@@ -19,5 +19,6 @@ block content
       .title
         h2 how I learned it
       .showbox.img-rounded.margin_top !{how}
-  a.button.btn.btn-info(href="/"+ username +"/" + id + "/edit") edit
+  if username
+    a.button.btn.btn-info(href="/"+ username +"/" + id + "/edit") edit
   a.button.btn.btn-info(href="/"+ username) back

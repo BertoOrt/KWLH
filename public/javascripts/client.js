@@ -9,6 +9,14 @@ $( document ).ready(function() {
       event.preventDefault();
     }
   });
+  $('.delete-user').click(function () {
+    var confirmation = window.confirm('Are you sure you want to delete your account and KWL(H) charts?');
+    if (confirmation){
+      $('.delete-user-form').submit();
+    } else {
+      event.preventDefault();
+    }
+  });
   $('.confirm').keyup(function (e) {
     if ($('.password').val() === $('.confirm').val()) {
       $('.confirmation').html('passwords match!')

@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   h3 title
-  form.form-inline(action="/charts", method="post")
+  form.form-inline(action="/"+username+"/charts", method="post")
     .toprow
       .title
       lable
@@ -12,12 +12,12 @@ block content
           input.box(type='checkbox' name='private') 
           | Private
     .tablerow
-      .img-rounded.knowNew.column
+      .img-rounded.knowNew.col-md-5.column
         .title
           h2 what I know
         .textarea
           textarea(data-provide='markdown' name='know')
-      .img-rounded.whatNew.column
+      .img-rounded.whatNew.col-md-5.column
         .title
           h2 what I want to know
         .textarea

@@ -2,7 +2,7 @@ extends ./../layout
 
 block content
   h3 title
-  form.form-inline(action="/charts/"+chart._id, method="post")
+  form.form-inline(action="/"+username+"/charts/"+chart._id, method="post")
     lable
       input.form-control.margin_right(type="text", name="topic" value=(chart ? chart.topic : ''))
       .checkbox
@@ -10,22 +10,22 @@ block content
           input(type='checkbox' name='private' checked=(chart ? (chart.private ? 'checked' : undefined) : undefined)) 
           |Private
     .tablerow
-      .img-rounded.knowNew.column2
+      .img-rounded.knowNew.col-md-3.column2
         .title
           h2 what I know
         .textarea
           textarea(data-provide='markdown' name='know')= chart.know
-      .img-rounded.whatNew.column2
+      .img-rounded.whatNew.col-md-3.column2
         .title
           h2 what I want to know
         .textarea
           textarea(data-provide='markdown' name='want')= chart.want
-      .img-rounded.learnNew.column2
+      .img-rounded.learnNew.col-md-3.column2
         .title
           h2 what I learned
         .textarea
           textarea(data-provide='markdown' name='learned')= chart.learned
-      .img-rounded.howNew.column2
+      .img-rounded.howNew.col-md-3.column2
         .title
           h2 how I learned it
         .textarea

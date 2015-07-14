@@ -3,6 +3,18 @@ var router = express.Router();
 var database = require('./../connection');
 var usersCollection = database.get('users');
 
+router.use('/:username', function (req, res, next) {
+  if (req.session === null) {
+    res.redirect('/')
+  }
+  else if (req.params.username !== req.session.username) {
+    res.redirect('/')
+  }
+  else {
+    next()
+  }
+})
+
 //**********
 //** EDIT **
 //**********
