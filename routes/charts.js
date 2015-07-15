@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var database = require('./../connection');
 var chartsCollection = database.get('charts');
-var markdown = require('./../public/Javascripts/markdown.js');
+var markdown = require('./../markdown');
 var validator = require('validator');
 
 //***********
