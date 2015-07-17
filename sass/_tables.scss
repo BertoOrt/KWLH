@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+  thead {
+    background: $secondary;
+    font-size: 120%;
+  }
+  tbody tr {
+    height: 50px;
+    text-align: center;
+  }
+  td:nth-child(2) {
+    width: 600px;
+  }
+  td {
+    padding-top: .8%;
+  }
+  tr:nth-child(2n+2) {
+    background: $primary;
+  }
+}

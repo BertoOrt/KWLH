@@ -5,6 +5,10 @@ var chartsCollection = database.get('charts');
 var markdown = require('./../markdown');
 var validator = require('validator');
 
+router.get('/stylesheet', function (req,res,next) {
+  res.render('stylesheet');
+})
+
 //***********
 //** INDEX **
 //***********

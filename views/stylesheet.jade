@@ -1,0 +1,139 @@
+extends layout
+
+block content
+  main
+    h1 This is an example of Heading 1
+    h2 This is an example of heading 2
+    h3 This is an example of heading 3
+    h4 This is an example of heading 4
+    h5 This is an example of heading 5
+    h6 This is an example of heading 6
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h1 This is an example of Heading 1
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h2 This is an example of heading 2
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h3 This is an example of heading 3
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h4 This is an example of heading 4
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h5 This is an example of heading 5
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h6 This is an example of heading 6
+    p
+      | A simple paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    p
+      | Some inline examples. 
+      strong This is strong text
+      | , consectetur adipisicing elit, 
+      em this is text with emphasis
+      |  ut labore et dolore magna aliqua. 
+      a(href='/') This is linked text
+      |  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    ul
+      li An unorder list
+      li With another item
+      li An more items
+    ol
+      li An order list
+      li With another item
+      li An more items
+    h4 Table Example
+    table
+      thead
+        tr
+          th Name
+          th Address
+          th Phone
+      tbody
+        tr
+          td Nicholas
+          td 10 Elm Street
+          td +1 (555) 234-2322
+        tr
+          td Ted
+          td 281a Elmvale Road
+          td +1 (555) 389-2391
+        tr
+          td Dwayne
+          td 892 Henley Cresent
+          td +1 (555) 950-9234
+    h4 Form Example
+    form
+      p
+        label Name
+        input(type='text')
+      p
+        label Email
+        input(type='text')
+      fieldset
+        legend Gender
+        p
+          input(type='radio' name="gender" id="one")
+          label(for='one')
+            span
+            | Male
+          input(type='radio' name="gender" id='two')
+          label(for='two')
+            span
+            | Female
+          input(type='radio' name="gender" id="three")
+          label(for='three')
+            span
+            | Other
+      p
+        label Country
+        select
+          option New Zealand
+          option Canada
+          option United States
+      p
+        p 
+          label Country
+        select(multiple='multiple')
+          option New Zealand
+          option Canada
+          option United States
+      p
+        input#four(type='checkbox')
+        label(for='four')
+          span
+          |Agree to Terms & Conditions
+      p
+        label Message
+        br
+        textarea
+      .form
+        form
+          .col-2
+            p
+              label 
+                | email
+                input(type='email' name='email' value=(email ? email : undefined))
+            p
+              label 
+                | password
+                input(type='password' name='password')
+            input.show(type='submit' value='log in')
+          .col-2
+            h4 or
+            .gitlogin
+              |Login with Github
+              img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
+            p
+              a.button.show(href="/auth/github") Login
+      p
+        input.submit(type='submit', value='Send message')
+        input.show(type='submit', value='Show message')
+        input.edit(type='submit', value='Edit message')
+    form.fit
+      input.delete(type='submit', value='Delete')
+  .banner
+    h1 This is an awesome banner
+  .subbanner

@@ -1,0 +1,38 @@
+// body {
+//   background-image: url('/images/c.jpg');
+//   background-attachment: fixed;
+//   background-size: 100% 100%;
+// }
+
+main {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(white, 0.95);
+  padding: 3%;
+}
+
+.banner {
+  width: 100%;
+  height: 130px;
+  background: rgba($fifth, 0.9);
+  color: white;
+  padding-top: 2%;
+  box-sizing: border-box;
+}
+
+.banner h1 {
+  padding-left: 1%;
+}
+
+.subbanner {
+  width: 100%;
+  height: 40px;
+  background: $primary;
+}
+
+.col-2 {
+  width: 50%;
+  height: 200px;
+  display: inline-block;
+}

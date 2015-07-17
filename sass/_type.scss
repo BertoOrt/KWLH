@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400,700);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+SC:400,700);
+
+html {font-size: 1.125em;}
+
+body {
+  background-color: white;
+  font-family: Cantarell, serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5em;
+  font-family: Alegreya SC, serif;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+h5, h6 {
+  font-weight: bold;
+}
+
+small, .font_small {font-size: 0.75em;}

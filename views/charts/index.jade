@@ -1,24 +1,17 @@
 extends ./../layout
 
 block content
-  h1=title
-  table.table
+  h2=title
+  table
     thead
       tr
         th Title 
         th Author
-        if username
-          th Options
+
     tbody
       each chart in charts
         if !chart.private
           tr
             td
-              a(href='/'+ chart.username +'/'+chart._id) !{chart.topic}
+              a.title(href='/'+ chart.username +'/'+chart._id) !{chart.topic}
             td= chart.username
-            td
-              if chart.username === username
-                a.btn.btn-primary.btn-sm.margin_right(href='/'+username+'/'+chart._id) Show
-                a.btn.btn-success.btn-sm.margin_right(href='/'+username+'/'+chart._id+'/edit') Edit
-                form.delete-chart-form.inline_block(action='/'+username+'/'+chart._id+'/delete' method='post')
-                  input.delete-chart.btn.btn-danger.btn-sm.margin_right(type='submit' value='Delete')

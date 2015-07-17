@@ -1,8 +1,8 @@
 extends ../layout
 
 block content
-  h1 Your Charts
-  table.table
+  h2 Your Charts
+  table
     thead
       tr
         th Title 
@@ -14,8 +14,8 @@ block content
             td
               a(href='/'+username+'/'+chart._id) !{chart.topic}
             td
-              a.btn.btn-primary.btn-sm.margin_right(href='/'+username+'/'+chart._id) Show
-              a.btn.btn-success.btn-sm.margin_right(href='/'+username+'/'+chart._id+'/edit') Edit
-              form.delete-chart-form.inline_block(action='/'+username+'/'+chart._id+'/delete' method='post')
-                input.delete-chart.btn.btn-danger.btn-sm(type='submit' value='Delete')
-  a.btn.btn-success.btn-lg(href='/' + username + '/new') Create a new KWL(H)
+              a.button.show(href='/'+username+'/'+chart._id) Show
+              a.button.edit(href='/'+username+'/'+chart._id+'/edit') Edit
+              form.fit(action='/'+username+'/'+chart._id+'/delete' method='post')
+                input.delete(type='submit' value='Delete')
+  a.button.show(href='/' + username + '/new') New

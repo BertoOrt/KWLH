@@ -8,17 +8,17 @@ block content
           =error
   form.form-inline(action="/login", method="post")
     label 
-      h3 email
+      | email
       input.form-control(type='email' name='email' value=(email ? email : undefined))
     label 
-      h3 password
+      | password
       input.form-control(type='password' name='password')
-    input.btn.btn-default(type='submit' value='log in')
+    input.show(type='submit' value='log in')
   h4 or
   .gitlogin
     |Login with Github
-    img.gitlogo(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
+    img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
   p
-    a.btn.btn-primary(href="/auth/github") Login
+    a.button.show(href="/auth/github") Login
   
       
