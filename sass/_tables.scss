@@ -1,8 +1,10 @@
 table {
-  width: 100%;
-  thead {
+  width: 90%;
+  margin: 0 auto;
+  thead tr{
     background: $secondary;
-    font-size: 120%;
+    font-size: 170%;
+    height: 50px;
   }
   tbody tr {
     height: 50px;

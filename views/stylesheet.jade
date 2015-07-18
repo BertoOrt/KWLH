@@ -44,7 +44,7 @@ block content
       li An order list
       li With another item
       li An more items
-    h4 Table Example
+    h2 Table Example
     table
       thead
         tr
@@ -64,7 +64,7 @@ block content
           td Dwayne
           td 892 Henley Cresent
           td +1 (555) 950-9234
-    h4 Form Example
+    h2 Form Example
     form
       p
         label Name
@@ -109,25 +109,27 @@ block content
         label Message
         br
         textarea
-      .form
+      h2 Login form
+      .login
         form
-          .col-2
+          p
+            label 
+              | email
+            input(type='email' name='email')
+          p
+            label 
+              | password
+            input(type='password' name='password')
+          input.show(type='submit' value='login')
+        h4 or
+        .github
+          .text
             p
-              label 
-                | email
-                input(type='email' name='email' value=(email ? email : undefined))
-            p
-              label 
-                | password
-                input(type='password' name='password')
-            input.show(type='submit' value='log in')
-          .col-2
-            h4 or
-            .gitlogin
-              |Login with Github
               img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
-            p
-              a.button.show(href="/auth/github") Login
+            span Login with Github
+          p
+            a.button.show(href="/auth/github") login
+      h2 Buttons
       p
         input.submit(type='submit', value='Send message')
         input.show(type='submit', value='Show message')

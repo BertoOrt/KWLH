@@ -1,0 +1,33 @@
+.login {
+  width: 60%;
+  margin: 0 auto;
+  input {
+    width: 60%;
+  }
+  label {
+    width: 40%;
+  }
+  label input, p {
+    display: inline-block;
+  }
+  input[type='submit'] {
+    width: 15%;
+    display: block;
+  }
+  a.button {
+    margin-left: 29%;
+    display: inline-block;
+  }
+  h4 {
+    width: 20%;
+    margin: 0 auto;
+  }
+  .github {
+    padding-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .text {
+    display: inline-block;
+  }
+}

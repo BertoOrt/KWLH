@@ -8,12 +8,11 @@ html
     script(src='/javascripts/bootstrap-markdown.js', type='text/javascript')
     script(src='/javascripts/client.js', type='text/javascript')
   body
-    .banner
-      h1 know-want-learn (how)
-    .body
-      .subbanner
+    .header
+      a(href="/")
+        |know-want-learn (how)
+      .nav
         nav
-          a.show.nav(href="/") home
           if username
             a.show.nav(href="/" + username) my charts
             a.show.nav(href="/logout") logout
@@ -28,5 +27,6 @@ html
           else
             a.show.nav(href="/login") login
             a.show.nav(href="/signup") signup
-      main
-        block content
+    .subbanner
+    main
+      block content

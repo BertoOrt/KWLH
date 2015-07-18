@@ -6,19 +6,26 @@ block content
       for error in errors
         p.error
           =error
-  form.form-inline(action="/login", method="post")
-    label 
-      | email
-      input.form-control(type='email' name='email' value=(email ? email : undefined))
-    label 
-      | password
-      input.form-control(type='password' name='password')
-    input.show(type='submit' value='log in')
-  h4 or
-  .gitlogin
-    |Login with Github
-    img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
-  p
-    a.button.show(href="/auth/github") Login
+          .login
+  .login
+    form(action="/login", method="post")
+      p
+        label 
+          | email
+        input(type='email' name='email' value=(email ? email : undefined))
+      p
+        label 
+          | password
+        input(type='password' name='password')
+      input.show(type='submit' value='login')
+    h4 or
+    .github
+      .text
+        p
+          img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
+        span Login with Github
+      p
+        a.button.show(href="/auth/github") login
+
   
       
