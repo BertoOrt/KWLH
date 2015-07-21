@@ -1,8 +1,12 @@
 .login {
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
+  border: 3px solid rgba($black, 0.3);
+  border-radius: 25px;
+  padding: 2%;
   input {
-    width: 60%;
+    width: 80%;
+    display: block;
   }
   label {
     width: 40%;
@@ -11,8 +15,10 @@
     display: inline-block;
   }
   input[type='submit'] {
-    width: 15%;
-    display: block;
+    width: 23%;
+    display: inline-block;
+    margin-left: 75%;
+    margin-bottom: 15px;
   }
   a.button {
     margin-left: 29%;
@@ -23,11 +29,40 @@
     margin: 0 auto;
   }
   .github {
-    padding-top: 30px;
-    width: 70%;
+    border-top: 1px dashed $black;
+    padding-top: 5px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .email {
+    width: 90%;
     margin: 0 auto;
   }
   .text {
     display: inline-block;
+  }
+  img {
+    margin-right: 30px;
+  }
+}
+
+.signup {
+  width: 60%;
+  margin: 0 auto;
+  border: 3px solid rgba($black, 0.3);
+  border-radius: 25px;
+  padding: 2%;
+  padding-left: 5%;
+  .col1, .col2 {
+    width: 50%;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  input {
+    width: 80%;
+    display: block;
+  }
+  .show {
+    width: 20%;
   }
 }

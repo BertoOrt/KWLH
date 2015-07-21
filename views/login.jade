@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  h1 login
   .errors
     if errors
       for error in errors
@@ -8,18 +9,17 @@ block content
           =error
           .login
   .login
-    form(action="/login", method="post")
-      p
+    .email
+      form(action="/login", method="post")
         label 
           | email
         input(type='email' name='email' value=(email ? email : undefined))
-      p
         label 
           | password
         input(type='password' name='password')
-      input.show(type='submit' value='login')
-    h4 or
+        input.show(type='submit' value='login')
     .github
+      h4 or
       .text
         p
           img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")

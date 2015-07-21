@@ -111,24 +111,46 @@ block content
         textarea
       h2 Login form
       .login
-        form
-          p
-            label 
-              | email
-            input(type='email' name='email')
-          p
-            label 
-              | password
-            input(type='password' name='password')
-          input.show(type='submit' value='login')
-        h4 or
+        .email
+          form
+            p
+              label 
+                | email
+              input(type='email' name='email')
+            p
+              label 
+                | password
+              input(type='password' name='password')
+            input.show(type='submit' value='login')
         .github
+          h4 or
           .text
             p
               img(src="http://www.andrewhay.ca/wp-content/uploads/2014/08/github-8-xxl.png", alt="github cat", width="43px", height="43px")
             span Login with Github
           p
             a.button.show(href="/auth/github") login
+      h2 Signup form
+      .signup
+        form.form-inline(action="/signup", method="post")
+          .col1
+            label 
+              |name
+              input.form-control(type='text' name='name' value=(signUpName ? signUpName : undefined))
+            label 
+              |email
+              input.form-control(type='email' name='email' value=(email ? email : undefined))
+            label 
+              |username
+              input.form-control(type='text' name='username' value=(username ? username : undefined))  
+          .col2
+            label
+              |password
+              input.password.form-control(type='password' name='password')
+            label
+              |confirm password
+              input.confirm.form-control(type='password' name='confirmation')
+          input.show(type='submit' value='sign up')
       h2 Buttons
       p
         input.submit(type='submit', value='Send message')

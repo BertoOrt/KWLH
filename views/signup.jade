@@ -8,22 +8,23 @@ block content
         p.error
           =error
   form.form-inline(action="/signup", method="post")
-    label 
-      h3 name
-      input.form-control(type='text' name='name' value=(signUpName ? signUpName : undefined))
-    label 
-      h3 email
-      input.form-control(type='email' name='email' value=(email ? email : undefined))
-    label 
-      h3 username
-      input.form-control(type='text' name='username' value=(username ? username : undefined))  
-    .block
-      label
-        h3 password
-        input.password.form-control(type='password' name='password')
-      label
-        h3 confirm password
-        input.confirm.form-control(type='password' name='confirmation')
-      .inline_block.confirmation
-    input.margin_top.btn.btn-default(type='submit' value='sign up')
+    .signup
+      .col1
+        label 
+          h3 name
+          input(type='text' name='name' value=(signUpName ? signUpName : undefined))
+        label 
+          h3 email
+          input(type='email' name='email' value=(email ? email : undefined))
+        label 
+          h3 username
+          input(type='text' name='username' value=(username ? username : undefined))  
+      .col2
+        label
+          h3 password
+          input(type='password' name='password')
+        label
+          h3 confirm password
+          input(type='password' name='confirmation')
+      input.show(type='submit' value='sign up')
       
