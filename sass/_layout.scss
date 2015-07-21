@@ -1,8 +1,9 @@
-// body {
-//   background-image: url('/images/purple.jpg');
-//   background-attachment: fixed;
-//   background-size: 100% 100%;
-// }
+body {
+  background-image: url('/images/desk.jpg');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100%;
+}
 
 main {
   max-width: 1400px;
@@ -10,12 +11,25 @@ main {
   margin: 0 auto;
   background-color: rgba(white, 0.95);
   padding: 3%;
+  padding-top: 100px;
+}
+
+.intro {
+  width: 100%;
+  background: $fifth;
+  margin-bottom: 3%;
+  color: $white;
+  padding: 2%;
+  box-sizing: border-box;
+  .row {
+    margin-left: 20%;
+  }
 }
 
 .banner {
   width: 100%;
   height: 300px;
-  background: rgba($fifth, 0.9);
+  background: rgba($sixth, 0.9);
   color: white;
   padding-top: 1%;
   box-sizing: border-box;
@@ -32,17 +46,15 @@ main {
 }
 
 .header {
+  position:fixed;
+  left:0;
+  top:0;
   width: 100%;
   height: 50px;
-  background: rgba($fifth, 0.9);
+  background: $fifth;
   color: white;
   padding-top: 1%;
   box-sizing: border-box;
-  .subbanner {
-    width: 100%;
-    height: 10px;
-    background: $primary;
-  }
   .nav {
     width: 23%;
     display: inline-block;
@@ -53,3 +65,20 @@ main {
     padding-left: 1%;
   }
 }
+.subbanner {
+  position:fixed;
+  left:0;
+  top:50px;
+  width: 100%;
+  height: 10px;
+  background: $primary;
+}
+
+// #footer {
+//   position:fixed;
+//   left:0px;
+//   bottom:0px;
+//   height:30px;
+//   width:100%;
+//   background:white;
+// }

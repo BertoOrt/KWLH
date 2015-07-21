@@ -1,30 +1,31 @@
 extends layout
 
 block content
-  h1= title
+  h1 signup
   .errors
     if errors
       for error in errors
         p.error
           =error
-  form.form-inline(action="/signup", method="post")
+  form(action="/signup", method="post")
     .signup
       .col1
         label 
-          h3 name
+          |name
           input(type='text' name='name' value=(signUpName ? signUpName : undefined))
         label 
-          h3 email
+          |email
           input(type='email' name='email' value=(email ? email : undefined))
         label 
-          h3 username
+          |username
           input(type='text' name='username' value=(username ? username : undefined))  
       .col2
+        .confirmation
         label
-          h3 password
-          input(type='password' name='password')
+          |password
+          input.password(type='password' name='password')
         label
-          h3 confirm password
-          input(type='password' name='confirmation')
+          |confirm password
+          input.confirm(type='password' name='confirmation')
       input.show(type='submit' value='sign up')
       

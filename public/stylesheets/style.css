@@ -48,12 +48,29 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  background-image: url("/images/desk.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100%; }
+
 main {
   max-width: 1400px;
   width: 90%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 3%; }
+  padding: 3%;
+  padding-top: 100px; }
+
+.intro {
+  width: 100%;
+  background: #2C302E;
+  margin-bottom: 3%;
+  color: #f0e6ef;
+  padding: 2%;
+  box-sizing: border-box; }
+  .intro .row {
+    margin-left: 20%; }
 
 .banner {
   width: 100%;
@@ -69,19 +86,18 @@ main {
 .subbanner {
   width: 100%;
   height: 10px;
-  background: #5dd39e; }
+  background: #9AE19D; }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 50px;
-  background: rgba(81, 59, 86, 0.9);
+  background: #2C302E;
   color: white;
   padding-top: 1%;
   box-sizing: border-box; }
-  .header .subbanner {
-    width: 100%;
-    height: 10px;
-    background: #bce784; }
   .header .nav {
     width: 23%;
     display: inline-block;
@@ -89,6 +105,14 @@ main {
   .header a, .header a:visited, .header a:link {
     color: white;
     padding-left: 1%; }
+
+.subbanner {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 10px;
+  background: #537A5A; }
 
 html {
   font-size: 1.125em; }
@@ -132,9 +156,10 @@ table {
   width: 90%;
   margin: 0 auto; }
   table thead tr {
-    background: #5dd39e;
+    background: #537A5A;
     font-size: 170%;
-    height: 50px; }
+    height: 50px;
+    color: #f0e6ef; }
   table tbody tr {
     height: 50px;
     text-align: center; }
@@ -143,7 +168,7 @@ table {
   table td {
     padding-top: .8%; }
   table tr:nth-child(2n+2) {
-    background: #bce784; }
+    background: #9AE19D; }
 
 input[type=text], input[type=email], input[type=password] {
   border: 3px solid rgba(102, 102, 102, 0.3);
@@ -155,7 +180,7 @@ input[type=text], input[type=email], input[type=password] {
 
 input[type='text']:focus, input[type=email]:focus, input[type=password]:focus {
   border: 3px solid #666;
-  box-shadow: 6px 6px 0px #5dd39e; }
+  box-shadow: 6px 6px 0px #9AE19D; }
 
 .title {
   width: 100%;
@@ -174,7 +199,7 @@ textarea {
 
 textarea:focus {
   border: 3px solid #666;
-  box-shadow: 6px 6px 0px #5dd39e;
+  box-shadow: 6px 6px 0px #9AE19D;
   transition: all 300ms ease; }
 
 select {
@@ -185,7 +210,7 @@ select {
 
 select:focus {
   border: 3px solid #666;
-  box-shadow: 6px 6px 0px #5dd39e; }
+  box-shadow: 6px 6px 0px #9AE19D; }
 
 input[type="radio"], input[type="checkbox"] {
   display: none; }
@@ -211,7 +236,7 @@ input[type="checkbox"] + label span {
 
 input[type="radio"]:checked + label span, input[type="checkbox"]:checked + label span {
   transition: background-color 0.1s linear;
-  background-color: #bce784; }
+  background-color: #537A5A; }
 
 select {
   border: 3px solid rgba(102, 102, 102, 0.3);
@@ -239,10 +264,10 @@ input[type='submit'].delete {
   width: 100%; }
 
 .submit {
-  background: rgba(93, 211, 158, 0.7); }
+  background: rgba(154, 225, 157, 0.7); }
 
 .edit {
-  background: rgba(81, 59, 86, 0.7); }
+  background: rgba(44, 48, 46, 0.7); }
 
 .delete {
   color: white;
@@ -250,37 +275,37 @@ input[type='submit'].delete {
 
 .show {
   color: white;
-  background: rgba(52, 138, 167, 0.7); }
+  background: rgba(144, 149, 144, 0.7); }
 
 input[type='submit']:hover, input[type='button']:hover, button:hover, a.button {
   color: white;
   border: 3px solid rgba(102, 102, 102, 0.8); }
 
 .submit:hover {
-  background: #5dd39e; }
+  background: #9AE19D; }
 
 .edit:hover {
-  background: #513b56; }
+  background: #2C302E; }
 
 .delete:hover {
   background: #e87461; }
 
 .show:hover {
-  background: #348aa7; }
+  background: #909590; }
 
 input[type='submit']:active, input[type='button']:active, button:active, a.button {
   color: gray;
   border: 3px solid #666; }
 
 a:link {
-  color: rgba(82, 81, 116, 0.5);
+  color: rgba(71, 74, 72, 0.5);
   text-decoration: none; }
 
 a:visited {
-  color: #525174; }
+  color: #474A48; }
 
 a:hover {
-  color: #513b56; }
+  color: #2C302E; }
 
 a.button {
   width: 100px;
@@ -332,7 +357,8 @@ ol {
   margin: 0 auto;
   border: 3px solid rgba(102, 102, 102, 0.3);
   border-radius: 25px;
-  padding: 2%; }
+  padding: 2%;
+  margin-bottom: 200px; }
   .login input {
     width: 80%;
     display: block; }
@@ -370,7 +396,8 @@ ol {
   border: 3px solid rgba(102, 102, 102, 0.3);
   border-radius: 25px;
   padding: 2%;
-  padding-left: 5%; }
+  padding-left: 5%;
+  margin-bottom: 200px; }
   .signup .col1, .signup .col2 {
     width: 50%;
     display: inline-block;

@@ -2,9 +2,10 @@ table {
   width: 90%;
   margin: 0 auto;
   thead tr{
-    background: $secondary;
+    background: $primary;
     font-size: 170%;
     height: 50px;
+    color: $white;
   }
   tbody tr {
     height: 50px;
@@ -17,6 +18,6 @@ table {
     padding-top: .8%;
   }
   tr:nth-child(2n+2) {
-    background: $primary;
+    background: $secondary;
   }
 }
