@@ -18,7 +18,7 @@ router.get('/:username/edit', function (req, res, next) {
   }
 }, function(req, res, next) {
   usersCollection.findOne({username: req.params.username}, function (err, data) {
-    res.render('users/edit', { title: 'Edit Profile', profile: data });
+    res.render('users/edit', { title: 'Edit Profile', profile: data , username: req.params.username});
   })
 });
 
@@ -37,7 +37,7 @@ router.post('/:username/edit', function(req, res, next) {
 router.post('/:username/delete', function(req, res, next) {
   usersCollection.remove({username: req.params.username});
   req.session = null;
-  res.redirect('/')
+  res.redirect('/');
 });
 
 module.exports = router;

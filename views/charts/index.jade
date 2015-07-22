@@ -1,26 +1,66 @@
-extends ./../layout
-
-block content
-  .intro
-    h2 Welcome to the best site for KWL(H) Charts!
-    p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What are KWL(H) charts you ask?! Only the best way to activate prior knowledge and prepare your mind to learn!
-    .row
-      p K - Stands for recalling the KNOW about the subject.
-      p W -	Stands for determining the WANT to learn about the subject.
-      p L -	Stands for identifying the LEARN process of researching.
-      p H -	Stands for HOW learning was achieved and HOW to learn more.
-    p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check them out and signup to create your own!
-  h2=title
-  table
-    thead
-      tr
-        th Title 
-        th Author
-
-    tbody
-      each chart in charts
-        if !chart.private
+doctype html
+html
+  head
+    title KWL(H)
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='/javascripts/markdown.js', type='text/javascript')
+    script(src='/javascripts/bootstrap-markdown.js', type='text/javascript')
+    script(src='/javascripts/client.js', type='text/javascript')
+  body
+    .header
+      nav
+        a(href="/")
+          |know-want-learn (how)
+        if username
+          a.show.nav(href="/logout") logout
+          if !user
+            a.show.nav(href="/"+username+"/edit") !{username}
+          else
+            !{user.displayName}
+          a.show.nav(href="/" + username) my charts
+        else
+          a.show.nav(href="/login") login
+          a.show.nav(href="/signup") signup
+    .subbanner
+  if !username
+    .intro
+      h2 Welcome to the best site for KWL(H) Charts!
+      p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What are KWL(H) charts you ask?! Only the best way to activate prior knowledge and prepare your mind to learn!
+      .row
+        p K - Stands for recalling the KNOW about the subject.
+        p W -	Stands for determining the WANT to learn about the subject.
+        p L -	Stands for identifying the LEARN process of researching.
+        p H -	Stands for HOW learning was achieved and HOW to learn more.
+      span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check them out and signup to create your own!
+    main.index
+      h2=title
+      table
+        thead
           tr
-            td
-              a.title(href='/'+ chart.username +'/'+chart._id) !{chart.topic}
-            td= chart.username
+            th Title 
+            th Author
+
+        tbody
+          each chart in charts
+            if !chart.private
+              tr
+                td
+                  a.title(href='/'+ chart.username +'/'+chart._id) !{chart.topic}
+                td= chart.username
+  else
+    main
+      h2=title
+      table
+        thead
+          tr
+            th Title 
+            th Author
+
+        tbody
+          each chart in charts
+            if !chart.private
+              tr
+                td
+                  a.title(href='/'+ chart.username +'/'+chart._id) !{chart.topic}
+                td= chart.username

@@ -3,16 +3,17 @@ extends ../layout
 block content
   h1= title
   form.form-inline(action="/"+ profile.username +"/edit", method="post")
-    label 
-      h3 name
-      input.form-control(type='text' name='name' value=profile.name)
-    label 
-      h3 email
-      input.form-control(type='text' name='email' value=profile.email)
-    label 
-      h3 username
-      input.form-control(type='text' name='username' value=profile.username)
-    input.btn.btn-default(type='submit' value='edit')
+    .signup
+      label 
+        | name
+        input(type='text' name='name' value=profile.name)
+      label 
+        | email
+        input(type='text' name='email' value=profile.email)
+      label 
+        | username
+        input(type='text' name='username' value=profile.username)
+      input.show(type='submit' value='edit')
   form(action='/'+profile.username+'/delete' method='post')
-    input.delete-user.btn.btn-danger.btn-sm(type='submit' value='Delete')
+    input.delete(type='submit' value='Delete')
       

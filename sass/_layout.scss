@@ -14,13 +14,17 @@ main {
   padding-top: 100px;
 }
 
+main.index {
+  padding-top: 30px;
+}
+
 .intro {
   width: 100%;
   background: $fifth;
-  margin-bottom: 3%;
   color: $white;
-  padding: 2%;
   box-sizing: border-box;
+  padding: 3%;
+  padding-top: 5%;
   .row {
     margin-left: 20%;
   }
@@ -56,13 +60,12 @@ main {
   padding-top: 1%;
   box-sizing: border-box;
   .nav {
-    width: 23%;
-    display: inline-block;
     float: right;
   }
   a, a:visited, a:link {
     color: white;
     padding-left: 1%;
+    display: inline-block;
   }
 }
 .subbanner {

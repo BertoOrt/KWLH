@@ -70,14 +70,18 @@ router.get('/:username/:id', function (req,res,next) {
     var want = markdown.mark(doc.want);
     var learned = markdown.mark(doc.learned);
     var how = markdown.mark(doc.how);
-    var username;
+    var username, owner;
+    if (req.params.username === req.session.username) {
+      owner = true;
+    }
     if (req.session === null) {
       username = undefined;
     }
     else {
       username = req.session.username;
     }
-    res.render('charts/show', {username: username, name: username, id: req.params.id, topic: doc.topic, know: know, want: want, learned: learned, how: how});
+    res.render('charts/show', {username: username, owner: owner, id: req.params.id,
+      topic: doc.topic, know: know, want: want, learned: learned, how: how});
   });
 });
 

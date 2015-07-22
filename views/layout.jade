@@ -9,24 +9,19 @@ html
     script(src='/javascripts/client.js', type='text/javascript')
   body
     .header
-      a(href="/")
-        |know-want-learn (how)
-      .nav
-        nav
-          if username
-            a.show.nav(href="/" + username) my charts
-            a.show.nav(href="/logout") logout
-            if !user
-              a.show.nav(href="/"+username+"/edit") edit profile
-            if user
-              .name
-                | Hello !{user.displayName}
-            else
-              .name
-                | Hello !{username}
+      nav
+        a(href="/")
+          |know-want-learn (how)
+        if username
+          a.show.nav(href="/logout") logout
+          if !user
+            a.show.nav(href="/"+username+"/edit") !{username}
           else
-            a.show.nav(href="/login") login
-            a.show.nav(href="/signup") signup
+            !{user.displayName}
+          a.show.nav(href="/" + username) my charts
+        else
+          a.show.nav(href="/login") login
+          a.show.nav(href="/signup") signup
     .subbanner
     main
       block content
