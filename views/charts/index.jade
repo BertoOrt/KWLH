@@ -17,7 +17,8 @@ html
           if !user
             a.show.nav(href="/"+username+"/edit") !{username}
           else
-            !{user.displayName}
+            .nav
+              !{user.displayName}
           a.show.nav(href="/" + username) my charts
         else
           a.show.nav(href="/login") login
