@@ -75,7 +75,7 @@ input[type="checkbox"] + label span {
 
 input[type="radio"]:checked + label span, input[type="checkbox"]:checked + label span {
   transition:background-color 0.1s linear;
-  background-color: $primary;
+  background-color: $secondary;
 }
 
 select {

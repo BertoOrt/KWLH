@@ -1,34 +1,21 @@
 extends ./../layout
 
 block content
-  h3 title
-  form.form-inline(action="/"+username+"/charts/"+chart._id, method="post")
+  h2 title
+  form(action="/"+username+"/charts/"+chart._id, method="post")
     lable
-      input.form-control.margin_right(type="text", name="topic" value=(chart ? chart.topic : ''))
-      .checkbox
-        label
-          input(type='checkbox' name='private' checked=(chart ? (chart.private ? 'checked' : undefined) : undefined)) 
-          |Private
-    .tablerow
-      .img-rounded.knowNew.col-md-3.column2
-        .title
-          h2 what I know
-        .textarea
-          textarea(data-provide='markdown' name='know')= chart.know
-      .img-rounded.whatNew.col-md-3.column2
-        .title
-          h2 what I want to know
-        .textarea
-          textarea(data-provide='markdown' name='want')= chart.want
-      .img-rounded.learnNew.col-md-3.column2
-        .title
-          h2 what I learned
-        .textarea
-          textarea(data-provide='markdown' name='learned')= chart.learned
-      .img-rounded.howNew.col-md-3.column2
-        .title
-          h2 how I learned it
-        .textarea
-          textarea(data-provide='markdown' name='how')= chart.how
-    input.button.btn.btn-success(type="submit", value="Save")
-  a.button.btn.btn-info(href="/"+ username) back
+      input(type="text", name="topic" value=(chart ? chart.topic : ''))
+    input#private(type='checkbox' name='private' checked=(chart ? (chart.private ? 'checked' : undefined) : undefined)) 
+    label(for="private")
+      span
+      | Private
+    h4 what I know
+    textarea(name='know')= chart.know
+    h4 what I want to know
+    textarea(name='want')= chart.want
+    h4 what I learned
+    textarea(name='learned')= chart.learned
+    h4 how I learned it
+    textarea(name='how')= chart.how
+    input.button.edit(type="submit", value="Save")
+  a.button.show(href="/"+ username) back

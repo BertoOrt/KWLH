@@ -1,24 +1,19 @@
 extends ../layout
 
 block content
-  h3= topic
-  .tablerow
-    .img-rounded.knowNew.col-md-3.column0
-      .title
-        h2 what I know
-      .showbox.img-rounded.margin_top !{know}
-    .img-rounded.wantNew.col-md-3.column0
-      .title
-        h2 what I want to know
-      .showbox.img-rounded.margin_top !{want}
-    .img-rounded.learnNew.col-md-3.column0
-      .title
-        h2 what I learned
-      .showbox.img-rounded.margin_top !{learned}
-    .img-rounded.howNew.col-md-3.column0
-      .title
-        h2 how I learned it
-      .showbox.img-rounded.margin_top !{how}
+  h2= topic
+  h4 what I know
+  .marked
+    !{know}
+  h4 what I want to know
+  .marked
+    !{want}
+  h4 what I learned
+  .marked
+    !{learned}
+  h4 how I learned it
+  .marked
+    !{how}
   if owner
-    a.button.btn.btn-info(href="/"+ username +"/" + id + "/edit") edit
-  a.button.btn.btn-info(href="/"+ username) back
+    a.button.edit(href="/"+ username +"/" + id + "/edit") edit
+  a.button.show(href="/"+ username) back

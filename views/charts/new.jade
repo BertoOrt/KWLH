@@ -1,26 +1,17 @@
 extends ../layout
 
 block content
-  h3 title
-  form.form-inline(action="/"+username+"/charts", method="post")
-    .toprow
-      .title
-      lable
-        input.form-control.margin_right(type="text", name="topic")
-      .checkbox
-        label.inline_block
-          input.box(type='checkbox' name='private') 
-          | Private
-    .tablerow
-      .img-rounded.knowNew.col-md-5.column
-        .title
-          h2 what I know
-        .textarea
-          textarea(data-provide='markdown' name='know')
-      .img-rounded.whatNew.col-md-5.column
-        .title
-          h2 what I want to know
-        .textarea
-          textarea(data-provide='markdown' name='want')
-    input.button.btn.btn-warning(type="submit", value="create")
-  a.button.btn.btn-info(href="/" + username) back
+  h2 title
+  form(action="/"+username+"/charts", method="post")
+    lable
+      input(type="text", name="topic")
+    input(type='checkbox' id='private' name='private') 
+    label(for='private')
+      span
+      | Private
+    h4 what I know
+    textarea(name='know')
+    h4 what I want to know
+    textarea(name='want')
+    input.edit(type="submit", value="create")
+  a.button.show(href="/" + username) back
