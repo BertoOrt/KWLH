@@ -7,7 +7,7 @@ input[type='submit'], input[type=button], button, a.button {
   display: inline-block;
 }
 
-input[type='submit'].delete {
+input[type='submit'].del {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -54,6 +54,11 @@ input[type='submit']:hover , input[type='button']:hover, button:hover, a.button 
 
 .show:hover {
   background: $tercerary;
+}
+
+.mark {
+  float: right;
+  clear: both;
 }
 
 input[type='submit']:active , input[type='button']:active, button:active, a.button {

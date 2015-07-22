@@ -10,12 +10,25 @@ block content
       span
       | Private
     h4 what I know
-    textarea(name='know')= chart.know
+    #markdown
+      textarea(name='know')= chart.know
+      .preview(display="none")
+      input.mark.edit(type='button' value='preview')
     h4 what I want to know
-    textarea(name='want')= chart.want
+    #markdown
+      textarea(name='want')= chart.want
+      .preview(display="none")
+      input.mark.edit(type='button' value='preview')
     h4 what I learned
-    textarea(name='learned')= chart.learned
+    #markdown
+      textarea(name='learned')= chart.learned
+      .preview(display="none")
+      input.mark.edit(type='button' value='preview')
     h4 how I learned it
-    textarea(name='how')= chart.how
-    input.button.edit(type="submit", value="Save")
+    #markdown
+      textarea(name='how')= chart.how
+      .preview(display="none")
+      input.mark.edit(type='button' value='preview')
+    input.edit(type="submit", value="Save")
+    input.delete.delete-chart(type='submit' value='Delete')
   a.button.show(href="/"+ username) back

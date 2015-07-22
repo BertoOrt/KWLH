@@ -2,8 +2,8 @@ extends ../layout
 
 block content
   h2= title
-  form.form-inline(action="/"+ profile.username +"/edit", method="post")
-    .signup
+  .editProfile
+    form.form-inline(action="/"+ profile.username +"/edit", method="post")
       label 
         | name
         input(type='text' name='name' value=profile.name)
@@ -14,6 +14,6 @@ block content
         | username
         input(type='text' name='username' value=profile.username)
       input.show(type='submit' value='edit')
-  form(action='/'+profile.username+'/delete' method='post')
-    input.delete(type='submit' value='Delete')
+    form(action='/'+profile.username+'/delete' method='post')
+      input.delete.delete-user(type='submit' value='Delete')
       

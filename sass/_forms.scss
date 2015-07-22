@@ -47,8 +47,8 @@
   }
 }
 
-.signup {
-  width: 60%;
+.signup, .editProfile {
+  width: 50%;
   margin: 0 auto;
   border: 3px solid rgba($black, 0.3);
   border-radius: 25px;
@@ -67,14 +67,31 @@
   .show {
     width: 20%;
   }
+  input[type='submit'].delete {
+    width: 20%;
+    margin-left: 65%;
+  }
 }
 
-.marked {
+.editProfile {
+  padding-right: 0;
+}
+
+.marked, .preview {
   border: 3px solid rgba($black, 0.3);
   margin: 1%;
   width: 97%;
   height: 300px;
   background: none;
   padding: 1%;
-  overflow: scroll; 
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.preview {
+  display: none;
+}
+
+#markdown {
+  margin-bottom: 5%;
 }

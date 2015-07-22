@@ -10,8 +10,14 @@ block content
       span
       | Private
     h4 what I know
-    textarea(name='know')
+    #markdown
+      textarea(name='know')
+      .preview(display="none")
+      input.mark.edit(type='button' value='preview')
     h4 what I want to know
-    textarea(name='want')
-    input.edit(type="submit", value="create")
+    #markdown
+      textarea(name='want')
+      .preview(display="none")
+      input.mark.edit(type='button' value='preview')
+    input.submit(type="submit", value="create")
   a.button.show(href="/" + username) back
