@@ -7,6 +7,7 @@ html
     script(src='/javascripts/markdown.js', type='text/javascript')
     script(src='/javascripts/bootstrap-markdown.js', type='text/javascript')
     script(src='/javascripts/client.js', type='text/javascript')
+    script(src='/javascripts/search.js', type='text/javascript')
   body
     .header
       nav
@@ -36,6 +37,10 @@ html
       span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check them out and signup to create your own!
     main.index
       h2=title
+      form(action='/?search=' method='get')
+        input#search(type='text' name='search' placeholder='search all charts...' autocomplete="off")
+        input#searchbutton(type='submit' value='Search')
+      ul#searchlist
       table
         thead
           tr
@@ -52,6 +57,12 @@ html
   else
     main
       h2=title
+      form(action='/?search=' method='get')
+        input#search(type='text' name='search' placeholder='search all charts...' autocomplete="off")
+        input#searchbutton(type='submit' value='Search')
+      ul#searchlist
+      div  
+      ul#searchlist
       table
         thead
           tr

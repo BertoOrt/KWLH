@@ -13,17 +13,26 @@ router.get('/stylesheet', function (req,res,next) {
 //** INDEX **
 //***********
 router.get('/', function(req, res, next) {
-  chartsCollection.find({}, {}, function (err, docs) {
-    if (req.session === null) {
-      var username = undefined;
-    }
-    else {
-      var username = req.session.username;
-    }
-    res.render('charts/index', {title: 'Charts', charts: docs, username: username});
-  });
+  if (req.xhr) {
+    var search = req.query.search;
+    var expression = new RegExp(search, 'i')
+    chartsCollection.find({$and: [{topic: {$regex: expression}}]}, function (err, docs) {
+      res.json(docs);
+    });
+  } else {
+    var search = req.query.search;
+    var expression = new RegExp(search, 'i')
+    chartsCollection.find({$and: [{topic: {$regex: expression}}]}, {}, function (err, docs) {
+      if (req.session === null) {
+        var username = undefined;
+      }
+      else {
+        var username = req.session.username;
+      }
+      res.render('charts/index', {title: 'Charts', charts: docs, username: username});
+    });
+  }
 });
-
 
 //*********
 //** NEW **
