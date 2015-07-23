@@ -10,15 +10,17 @@ $(document).ready(function() {
       var ul = document.getElementById('searchlist');
       ul.style.display = 'inline-block';
       ul.innerHTML = null;
-      results.forEach(function (e) {
+      for(var i=0; i < 5; i++){
         var li = document.createElement('li');
         var a = document.createElement('a');
-        a.innerHTML = e.topic;
-        a.href = './?search='+e.topic.toLowerCase();
+        a.innerHTML = results[i].topic;
+        a.href = './?search='+results[i].topic.toLowerCase();
         li.appendChild(a);
         ul.appendChild(li);
-        console.log(e.topic);
-      });
+      }
+      if (!searchText) {
+        ul.style.display = 'none';
+      }
     });
     xhr.send();
   });
